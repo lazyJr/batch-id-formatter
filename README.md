@@ -1,5 +1,9 @@
 # 批量编号格式化（Batch ID Formatter）
 
+[English](#english) · [简体中文](#简体中文)
+
+## 简体中文
+
 一个无需联网的 Chrome 扩展：把粘贴的编号整理成每行一个、以逗号分隔的列表，并选择双引号、单引号或无引号。默认使用双引号。
 
 ## 安装
@@ -39,3 +43,27 @@ VIP123;;;;SSS456; AB12CD34
 ## 许可
 
 [MIT](LICENSE)
+
+## English
+
+Batch ID Formatter is an offline Chrome extension that turns pasted IDs into one item per line, separated by commas. Choose double quotes (default), single quotes, or no quotes, then copy the result.
+
+### Install
+
+1. Download or clone this repository.
+2. Open `chrome://extensions` in Chrome and enable **Developer mode**.
+3. Select **Load unpacked** and choose the folder containing `manifest.json`.
+4. Open the extension popup, paste your IDs, and copy the formatted result.
+
+### Parsing rules
+
+- If the input contains spaces, line breaks, commas, Chinese commas, ideographic commas, semicolons, or quotes, the extension splits only at those separators. It preserves the characters inside each ID. For example, `VIP123;;;;SSS456; AB12CD34` produces three IDs.
+- If the entire input has no such separator, adjacent letter-and-digit IDs such as `AB123CD456` can be split into `AB123` and `CD456`.
+- For adjacent numeric IDs, enter the number of digits per ID. A shorter final group is retained.
+- Input order and duplicates are preserved. The extension does not validate the meaning of an ID.
+
+### Development and privacy
+
+The extension uses plain HTML, CSS, and JavaScript, with no build step or external dependencies. Run `node --test tests/formatter.test.js` for the parsing tests. The extension requests no browser permissions. Pasted content is processed locally in the popup; it is not uploaded or saved. See the [privacy policy](PRIVACY.md).
+
+Licensed under [MIT](LICENSE).

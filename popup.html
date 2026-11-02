@@ -1,25 +1,25 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>编号格式化</title>
+  <title>Batch ID Formatter</title>
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
   <main>
     <header>
       <div class="mark">ID<span>↗</span></div>
-      <div><p class="eyebrow">TEXT UTILITY</p><h1>编号格式化</h1></div>
+      <div><p class="eyebrow">TEXT UTILITY</p><h1 data-i18n="extensionName">Batch ID Formatter</h1></div>
     </header>
-    <p class="intro">粘贴任意编号；有分隔符时只按分隔符拆分，避免误切编号。</p>
-    <div class="field-head"><label for="source">原始内容</label><button id="clear" class="text-button" type="button">清空</button></div>
-    <textarea id="source" spellcheck="false" placeholder="例如 AB123CD456，或一串逗号分隔的编号…"></textarea>
-    <div class="length-setting"><label for="number-length">纯数字粘连时，每个编号的位数</label><input id="number-length" type="number" min="1" max="100" placeholder="留空则不拆分"></div>
-    <div class="settings"><span>引号格式</span><div class="choices" role="group" aria-label="引号格式"><button type="button" data-quote="double" aria-pressed="true">双引号</button><button type="button" data-quote="single" aria-pressed="false">单引号</button><button type="button" data-quote="none" aria-pressed="false">无引号</button></div></div>
-    <div class="field-head"><label for="result">格式化结果</label><span id="count">0 个编号</span></div>
-    <textarea id="result" readonly spellcheck="false" placeholder="结果会显示在这里"></textarea>
-    <button id="copy" class="copy" type="button" disabled>复制结果 <span>↗</span></button>
+    <p class="intro" data-i18n="intro">Paste IDs. Separators keep each ID intact.</p>
+    <div class="field-head"><label for="source" data-i18n="sourceLabel">Input</label><button id="clear" class="text-button" type="button" data-i18n="clear">Clear</button></div>
+    <textarea id="source" spellcheck="false" data-i18n-placeholder="sourcePlaceholder" placeholder="e.g. AB123CD456 or comma-separated IDs…"></textarea>
+    <div class="length-setting"><label for="number-length" data-i18n="lengthLabel">Digits per ID when numbers run together</label><input id="number-length" type="number" min="1" max="100" data-i18n-placeholder="lengthPlaceholder" placeholder="Leave blank to keep intact"></div>
+    <div class="settings"><span data-i18n="quoteLabel">Quotes</span><div class="choices" role="group" aria-label="Quotes" data-i18n-aria="quoteLabel"><button type="button" data-quote="double" aria-pressed="true" data-i18n="doubleQuote">Double</button><button type="button" data-quote="single" aria-pressed="false" data-i18n="singleQuote">Single</button><button type="button" data-quote="none" aria-pressed="false" data-i18n="noQuote">None</button></div></div>
+    <div class="field-head"><label for="result" data-i18n="resultLabel">Result</label><span id="count">0 IDs</span></div>
+    <textarea id="result" readonly spellcheck="false" data-i18n-placeholder="resultPlaceholder" placeholder="Formatted IDs appear here"></textarea>
+    <button id="copy" class="copy" type="button" disabled><span data-i18n="copy">Copy result</span><span>↗</span></button>
     <p id="status" role="status" aria-live="polite"></p>
   </main>
   <script src="formatter.js"></script>

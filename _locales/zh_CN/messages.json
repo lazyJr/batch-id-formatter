@@ -1,0 +1,20 @@
+{
+  "extensionName": {"message": "批量编号格式化"},
+  "extensionDescription": {"message": "整理空格或标点分隔的编号，选择引号格式并一键复制结果。"},
+  "intro": {"message": "粘贴任意编号；有分隔符时只按分隔符拆分，避免误切编号。"},
+  "sourceLabel": {"message": "原始内容"},
+  "clear": {"message": "清空"},
+  "sourcePlaceholder": {"message": "例如 AB123CD456，或一串逗号分隔的编号…"},
+  "lengthLabel": {"message": "纯数字粘连时，每个编号的位数"},
+  "lengthPlaceholder": {"message": "留空则不拆分"},
+  "quoteLabel": {"message": "引号格式"},
+  "doubleQuote": {"message": "双引号"},
+  "singleQuote": {"message": "单引号"},
+  "noQuote": {"message": "无引号"},
+  "resultLabel": {"message": "格式化结果"},
+  "resultPlaceholder": {"message": "结果会显示在这里"},
+  "copy": {"message": "复制结果"},
+  "count": {"message": "$COUNT$ 个编号", "placeholders": {"count": {"content": "$1"}}},
+  "copied": {"message": "已复制到剪贴板"},
+  "copyFailed": {"message": "复制失败，请手动复制已选中的结果"}
+}

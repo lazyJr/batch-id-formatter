@@ -1,10 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "编号格式化",
-  "version": "1.0.0",
-  "description": "整理粘连或混合分隔的编号，一键复制格式化结果。",
+  "default_locale": "en",
+  "name": "__MSG_extensionName__",
+  "version": "1.1.0",
+  "description": "__MSG_extensionDescription__",
+  "icons": {"16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png"},
   "action": {
-    "default_title": "编号格式化",
+    "default_title": "__MSG_extensionName__",
     "default_popup": "popup.html"
   }
 }

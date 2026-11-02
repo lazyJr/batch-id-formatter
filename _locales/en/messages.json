@@ -1,0 +1,20 @@
+{
+  "extensionName": {"message": "Batch ID Formatter"},
+  "extensionDescription": {"message": "Format lists of IDs separated by spaces or punctuation, choose quotes, and copy the result."},
+  "intro": {"message": "Paste IDs. When separators are present, split only at those separators to keep each ID intact."},
+  "sourceLabel": {"message": "Input"},
+  "clear": {"message": "Clear"},
+  "sourcePlaceholder": {"message": "e.g. AB123CD456 or comma-separated IDs…"},
+  "lengthLabel": {"message": "Digits per ID when numbers run together"},
+  "lengthPlaceholder": {"message": "Leave blank to keep intact"},
+  "quoteLabel": {"message": "Quotes"},
+  "doubleQuote": {"message": "Double"},
+  "singleQuote": {"message": "Single"},
+  "noQuote": {"message": "None"},
+  "resultLabel": {"message": "Result"},
+  "resultPlaceholder": {"message": "Formatted IDs appear here"},
+  "copy": {"message": "Copy result"},
+  "count": {"message": "$COUNT$ IDs", "placeholders": {"count": {"content": "$1"}}},
+  "copied": {"message": "Copied to clipboard"},
+  "copyFailed": {"message": "Copy failed. Select and copy the highlighted result."}
+}

@@ -6,11 +6,24 @@ const status = document.getElementById('status');
 const numberLength = document.getElementById('number-length');
 const quoteValues = { double: '"', single: "'", none: '' };
 let selectedQuote = 'double';
+const message = (key, substitutions) => chrome.i18n.getMessage(key, substitutions) || key;
+
+document.documentElement.lang = chrome.i18n.getUILanguage();
+document.title = message('extensionName');
+document.querySelectorAll('[data-i18n]').forEach(element => {
+  element.textContent = message(element.dataset.i18n);
+});
+document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+  element.placeholder = message(element.dataset.i18nPlaceholder);
+});
+document.querySelectorAll('[data-i18n-aria]').forEach(element => {
+  element.setAttribute('aria-label', message(element.dataset.i18nAria));
+});
 
 function refresh() {
   const ids = extractIds(source.value, numberLength.value);
   result.value = formatIds(source.value, quoteValues[selectedQuote], numberLength.value);
-  count.textContent = `${ids.length} 个编号`;
+  count.textContent = message('count', String(ids.length));
   copy.disabled = ids.length === 0;
   status.textContent = '';
 }
@@ -32,9 +45,10 @@ document.querySelectorAll('[data-quote]').forEach(button => {
 copy.addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText(result.value);
-    status.textContent = '已复制到剪贴板';
+    status.textContent = message('copied');
   } catch {
     result.select();
-    status.textContent = '复制失败，请手动复制已选中的结果';
+    status.textContent = message('copyFailed');
   }
 });
+refresh();
