@@ -1,0 +1,37 @@
+popup.html
+  s_76fcd5742b0cc4::t_f3589ad0b67f4c 2,6,13,15-22
+_locales/zh_CN/messages.json
+  s_76fcd5742b0cc4::t_7ce46bb86a2bd3 17
+  s_76fcd5742b0cc4::t_15a24f1cd53dfc 1-16,18-20
+STORE_LISTING.md
+  s_76fcd5742b0cc4::t_7aedbd9559d92e 1-37
+manifest.json
+  s_76fcd5742b0cc4::t_99ed81c7228f35 3-7,9
+popup.js
+  s_76fcd5742b0cc4::t_7ce46bb86a2bd3 9,26
+  s_76fcd5742b0cc4::t_3afe914ab56198 11-21,48,51,54
+  s_76fcd5742b0cc4::t_ed80ae3d69a450 10
+_locales/en/messages.json
+  s_76fcd5742b0cc4::t_15a24f1cd53dfc 1-16,18-20
+  s_76fcd5742b0cc4::t_7ce46bb86a2bd3 17
+README.md
+  s_76fcd5742b0cc4::t_7aedbd9559d92e 3-6,46-69
+PRIVACY.md
+  s_76fcd5742b0cc4::t_7aedbd9559d92e 1-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "c293581b80564bdec90414ade4a25d426c25ed3f",
+  "prompts": {},
+  "sessions": {
+    "s_76fcd5742b0cc4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19b35-cf84-73b1-bbb5-0019cb335770",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "lazyJr <lazyJr@users.noreply.github.com>"
+    }
+  }
+}
