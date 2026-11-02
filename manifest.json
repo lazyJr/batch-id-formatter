@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "编号格式化",
+  "version": "1.0.0",
+  "description": "整理粘连或混合分隔的编号，一键复制格式化结果。",
+  "action": {
+    "default_title": "编号格式化",
+    "default_popup": "popup.html"
+  }
+}
